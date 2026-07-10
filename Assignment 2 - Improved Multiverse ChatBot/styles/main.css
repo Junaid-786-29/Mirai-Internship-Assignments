@@ -1,0 +1,122 @@
+
+/* Yapper Studio - Consistent Light Theme (No Dark Mode) */
+
+/* --- Variables --- */
+:root {
+  --bg-main: #F8F9FC;
+  --bg-sidebar: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --accent-primary: #7C3AED;
+  --accent-hover: #6D28D9;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-light: #E5E7EB;
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --radius-md: 16px;
+}
+
+/* --- Main Page --- */
+body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Sidebar --- */
+.stSidebar {
+  background-color: var(--bg-sidebar) !important;
+  border-right: 1px solid var(--border-light) !important;
+  padding: 1.5rem 1rem !important;
+}
+
+/* Ensure ALL sidebar text is dark/readable */
+.stSidebar * {
+  color: var(--text-primary) !important;
+}
+
+/* Sidebar caption (subtitle, favorite replies, etc.) */
+.stSidebar .stCaption {
+  color: var(--text-secondary) !important;
+}
+
+/* --- Buttons --- */
+.stButton > button {
+  border-radius: var(--radius-md) !important;
+  border: none !important;
+  padding: 0.75rem 1.25rem !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Primary Button (New Chat) */
+button[kind="primary"] {
+  background-color: var(--accent-primary) !important;
+  color: white !important;
+}
+
+button[kind="primary"]:hover {
+  background-color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Secondary Buttons */
+.stButton > button:not([kind="primary"]) {
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+/* --- Inputs, Select, Slider --- */
+/* Text Inputs & Dropdowns */
+.stTextInput > div > div > input,
+.stSelectbox > div > div {
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-light) !important;
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+  padding: 0.75rem 1rem !important;
+}
+
+/* Slider Track */
+.stSlider > div > div > div[data-baseweb="slider"] > div:first-child {
+  background-color: var(--border-light) !important;
+}
+
+/* Slider Active Track & Thumb */
+.stSlider > div > div > div[data-baseweb="slider"] > div:nth-child(2) > div {
+  background-color: var(--accent-primary) !important;
+}
+
+.stSlider > div > div > div[data-baseweb="slider"] > div:nth-child(2) > div > div {
+  background-color: var(--accent-primary) !important;
+}
+
+/* --- Chat Interface --- */
+/* Chat Messages */
+.stChatMessage {
+  background-color: var(--bg-card) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1rem 1.25rem !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* User/Assistant Avatar Text */
+.stChatMessage .stMarkdown {
+  color: var(--text-primary) !important;
+}
+
+/* --- Divider --- */
+hr {
+  border-color: var(--border-light) !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* --- Hide Streamlit Defaults --- */
+#MainMenu {
+  visibility: hidden;
+}
+footer {
+  visibility: hidden;
+}
+
