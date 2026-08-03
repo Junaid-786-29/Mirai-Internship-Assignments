@@ -1,7 +1,0 @@
-
-streamlit
-google-genai
-python-dotenv
-streamlit-extras
-streamlit-option-menu
-
