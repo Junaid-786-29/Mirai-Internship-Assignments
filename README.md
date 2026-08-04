@@ -126,13 +126,13 @@ Assignments/
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Junaid-786-29/Mirai-Internship-Assignments.git
 ```
 
 ### 2. Navigate to the project
 
 ```bash
-cd <repository-folder>
+cd Mirai-Internship-Assignments
 ```
 
 ### 3. Install the required packages
