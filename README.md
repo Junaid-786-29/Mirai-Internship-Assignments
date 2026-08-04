@@ -1,48 +1,127 @@
-# MirAI Internship Assignment 1
-## The Identity Echo Interface
+# MirAI Internship Assignments
 
-A simple Streamlit web application developed as part of the **MirAI School of Technology – Virtual Summer Internship 2026**.
+## MirAI School of Technology – Virtual Summer Internship 2026
 
-## 📌 Objective
-
-The application collects a user's name and message through a simple interface, validates the inputs, and displays an appropriate response based on the submitted data.
+This repository contains the assignments completed as part of the **MirAI School of Technology – Virtual Summer Internship 2026**. Each assignment focuses on building practical AI-powered applications using Python and Streamlit while learning prompt engineering, API integration, and modern UI development.
 
 ---
 
-## ✨ Features
+# 📁 Assignments
 
-- User-friendly Streamlit interface
-- Input field for user's name
-- Input field for user's message
-- "Transmit" button to submit data
-- Input validation
-  - Error if the name is empty
-  - Warning if the message is empty
-- Personalized success message using Python f-strings
-- Bonus: Token Cost Estimator (approximate token usage based on message length)
+## Assignment 1 – The Identity Echo Interface
+
+### 📌 Objective
+
+Build a simple Streamlit application that collects a user's name and message, validates the inputs, and displays personalized feedback.
+
+### ✨ Features
+
+* User-friendly Streamlit interface
+* Input field for user's name
+* Input field for user's message
+* **Transmit** button
+* Input validation
+
+  * Error if the name is empty
+  * Warning if the message is empty
+* Personalized success message using Python f-strings
+* Bonus: Token Cost Estimator (approximate token usage based on message length)
+
+### 📚 Learning Outcomes
+
+* Creating a Streamlit application
+* Using `st.title()` and `st.write()`
+* Collecting user input with `st.text_input()`
+* Creating buttons using `st.button()`
+* Implementing conditional logic (`if`, `elif`, `else`)
+* Displaying feedback using:
+
+  * `st.error()`
+  * `st.warning()`
+  * `st.success()`
+  * `st.info()`
+* Using Python f-strings
+* Estimating token usage
 
 ---
 
-## 🛠️ Technologies Used
+# Assignment 2 – Upgrading the AI Multiverse
 
-- Python 3
-- Streamlit
+### 📌 Objective
+
+Upgrade a basic AI chatbot into a modern conversational web application by integrating AI personalities, prompt engineering, sidebar controls, and a chat-based interface.
+
+### ✨ Features
+
+* AI-powered chatbot built with **Streamlit**
+* AI model integration using the **Groq API**
+* Multiple AI personalities:
+
+  * Friendly Teacher
+  * Expert Hacker
+  * Funny Friend
+  * A Panicked College Student at 3 AM
+  * A 1920s Mafia Boss
+  * A Highly Sarcastic Fitness Coach
+* Sidebar-based application settings
+* Adjustable **Intensity Level (1–10)** to control personality behavior
+* Prompt engineering using Python f-strings
+* Modern chat interface using `st.chat_message()`
+* Dynamic emoji avatars based on the selected personality
+* Clean and interactive user interface
+
+### 📚 Learning Outcomes
+
+* Integrating an AI API into a Streamlit application
+* Loading API keys securely using `.env`
+* Prompt engineering
+* Working with sidebar components
+* Using `st.sidebar.selectbox()`
+* Using `st.sidebar.slider()`
+* Using `st.chat_message()` for chat interfaces
+* Applying Python control flow (`if`, `elif`, `else`)
+* Creating dynamic UI elements
+* Building interactive AI-powered applications
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Technologies Used
+
+* Python 3
+* Streamlit
+* Groq API
+* python-dotenv
+
+---
+
+# 📂 Project Structure
+
+```text
+Assignments/
+│
+├── Assignment 1/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── README.md
+│   └── .gitignore
+│
+├── Assignment 2/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── README.md
+│   ├── .env (not included)
+│   └── .gitignore
+│
+├── screenshots/
+│   └── dashboard.png
+│
+└── README.md
 
 ```
-Assignment 1/
-│── app.py
-│── requirements.txt
-│── README.md
-│── .gitignore
-```
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
 ### 1. Clone the repository
 
@@ -50,19 +129,25 @@ Assignment 1/
 git clone <repository-url>
 ```
 
-### 2. Navigate to the project folder
+### 2. Navigate to the project
 
 ```bash
 cd <repository-folder>
 ```
 
-### 3. Install dependencies
+### 3. Install the required packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+### 4. Create a `.env` file
+
+```env
+GROQ_API_KEY=your_api_key_here
+```
+
+### 5. Run the application
 
 ```bash
 streamlit run app.py
@@ -70,31 +155,33 @@ streamlit run app.py
 
 ---
 
-## 📸 Preview
+# 📸 Preview
 
-![alt text](dashboard.png)
+### Assignment 1
 
----
+![alt text](image.png)
 
-## 📖 Learning Outcomes
+### Assignment 2
 
-Through this assignment, I learned:
-
-- Creating a Streamlit application
-- Using `st.title()` and `st.write()`
-- Collecting user input with `st.text_input()`
-- Creating buttons using `st.button()`
-- Implementing conditional logic (`if`, `elif`, `else`)
-- Displaying feedback using:
-  - `st.error()`
-  - `st.warning()`
-  - `st.success()`
-  - `st.info()`
-- Using Python f-strings for formatted output
-- Estimating token usage based on character count
+![alt text](image-1.png)
 
 ---
 
-## 📄 License
+# 🎯 Skills Demonstrated
 
-This project was created for educational purposes as part of the **MirAI School of Technology Virtual Summer Internship 2026**.
+* Python Programming
+* Streamlit Development
+* AI API Integration
+* Prompt Engineering
+* Environment Variable Management
+* User Interface Design
+* Chatbot Development
+* Conditional Logic
+* Python f-strings
+* Dynamic User Interfaces
+
+---
+
+# 📄 License
+
+This repository was created for educational purposes as part of the **MirAI School of Technology – Virtual Summer Internship 2026**.
