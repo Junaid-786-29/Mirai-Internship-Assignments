@@ -161,6 +161,8 @@ streamlit run app.py
 
 ![alt text](screenshots/image.png)
 
+---
+
 ### Assignment 2
 
 ![alt text](screenshots/image-1.png)
