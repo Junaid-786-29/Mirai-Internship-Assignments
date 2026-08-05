@@ -222,6 +222,10 @@ streamlit run app.py
 * Conditional Logic
 * Python f-strings
 * Dynamic User Interfaces
+* Streamlit Session State
+* Stateful Chatbot Development
+* Conversation Memory Management
+* Interactive Chat Interfaces
 
 ---
 
