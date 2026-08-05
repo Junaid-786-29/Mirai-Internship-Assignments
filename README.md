@@ -85,6 +85,35 @@ Upgrade a basic AI chatbot into a modern conversational web application by integ
 
 ---
 
+# Assignment 3 – The Memory Vault (Stateful Chatbot)
+
+### 📌 Objective
+
+Upgrade the AI chatbot from a stateless application to a stateful conversational assistant by implementing persistent chat history using Streamlit's `st.session_state`.
+
+### ✨ Features
+
+* Persistent chat history using `st.session_state`
+* Modern chat interface with `st.chat_input()`
+* Displays previous conversations automatically using `st.chat_message()`
+* Stores both user and AI messages across Streamlit reruns
+* Chat history remains visible even after changing sidebar settings
+* AI personalities and intensity controls from Assignment 2 remain fully functional
+* Dynamic emoji avatars based on the selected personality
+* Improved conversational experience with memory support
+
+### 📚 Learning Outcomes
+
+* Understanding Streamlit Session State
+* Building stateful conversational applications
+* Managing application state across Streamlit reruns
+* Using `st.chat_input()`
+* Using `st.chat_message()`
+* Storing and rendering chat history
+* Combining prompt engineering with conversation memory
+
+---
+
 # 🛠️ Technologies Used
 
 * Python 3
@@ -104,7 +133,7 @@ Assignments/
 │   ├── requirements.txt
 │   ├── README.md
 │   └── .gitignore
-│
+|
 ├── Assignment 2/
 │   ├── app.py
 │   ├── requirements.txt
@@ -112,8 +141,14 @@ Assignments/
 │   ├── .env (not included)
 │   └── .gitignore
 │
+├── Assignment 3/
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── README.md
+│   ├── .env (not included)
+│   └── .gitignore
+│
 ├── screenshots/
-│   └── dashboard.png
 │
 └── README.md
 
@@ -166,6 +201,12 @@ streamlit run app.py
 ### Assignment 2
 
 ![alt text](screenshots/image-1.png)
+
+---
+
+### Assignment 3
+
+![alt text](screenshots/image-2.png)
 
 ---
 
