@@ -159,12 +159,48 @@ Upgrade a basic AI Image Studio into a more polished AI-powered image generation
 
 ---
 
+# Assignment 5 – AI Visual Novel
+
+### 📌 Objective
+
+Build an interactive AI-powered visual novel application featuring dynamic narrative branching, visual scene generation, and text-to-speech audio narration using Groq, Pollinations AI, and gTTS.
+
+### ✨ Features
+
+* Interactive Visual Novel engine built with **Streamlit**
+* Multi-turn story generation powered by **Groq API** (`llama-3.3-70b-versatile`)
+* Enforced JSON response schema for story text, image prompts, and choices
+* AI image generation for scenes using **Pollinations AI**
+* Text-to-Speech (TTS) audio narration using **gTTS**
+* Sidebar controls for customizable **Genre** (Fantasy, Horror, Sci-Fi, Mystery, Adventure) and **Art Style** (Anime, Realistic, Watercolor, Cyberpunk, Pixel Art)
+* Dynamic interactive choice buttons for narrative progression
+* Persistent story history rendering using `st.session_state`
+* Read-only historical scene view preserving past text, images, and audio playback
+* **Restart Story** button to reset conversation history and state
+* Graceful error handling and fallbacks for external APIs
+* Modern custom CSS UI with dark gradients and glassmorphic scene cards
+
+### 📚 Learning Outcomes
+
+* Implementing stateful multi-turn AI storytelling
+* Advanced prompt engineering for strict JSON outputs
+* Combining LLM responses with image generation and audio synthesis pipelines
+* Managing persistent story history with `st.session_state`
+* Dynamic UI rendering for past vs. current scene choices
+* Implementing graceful degradation with `try-except` error handling
+* Enhancing Streamlit applications with custom CSS styling
+
+---
+
 # 🛠️ Technologies Used
 
 * Python 3
 * Streamlit
 * Groq API
 * python-dotenv
+* Pollinations AI API
+* gTTS (Google Text-to-Speech)
+* requests
 
 ---
 
@@ -196,6 +232,14 @@ Assignments/
 ├── Assignment 4/
 │   ├── app.py
 │   ├── requirements.txt
+│   └── .gitignore
+│
+├── Assignment 5/
+│   ├── app.py
+│   ├── assets/
+│   │   ├── images/
+│   │   └── audio/
+│   ├── .env (not included)
 │   └── .gitignore
 │
 ├── screenshots/
@@ -266,6 +310,12 @@ streamlit run app.py
 
 ---
 
+### Assignment 5
+
+![alt text](screenshots/image-4.png)
+
+---
+
 # 🎯 Skills Demonstrated
 
 * Python Programming
@@ -293,6 +343,10 @@ streamlit run app.py
 * Interactive Streamlit Sidebar
 * User Experience (UX) Enhancements
 * Randomized Content Generation
+* Text-to-Speech (TTS) Synthesis
+* Multi-Turn Story Generation
+* JSON Output Formatting
+* Custom CSS UI Styling
 
 ---
 
