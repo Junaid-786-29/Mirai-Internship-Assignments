@@ -114,6 +114,51 @@ Upgrade the AI chatbot from a stateless application to a stateful conversational
 
 ---
 
+# Assignment 4 – Upgrading the AI Image Studio
+
+### 📌 Objective
+
+Upgrade a basic AI Image Studio into a more polished AI-powered image generation application by fixing existing bugs, improving the user experience, and adding creative new features using the Pollinations AI Image API.
+
+### ✨ Features
+
+* AI image generation using **Pollinations AI**
+* Clean and interactive **Streamlit** user interface
+* Prompt-based image generation
+* Multiple art styles:
+
+  * Realistic
+  * Anime
+  * Fantasy
+  * Cyberpunk
+  * Oil Painting
+  * Pixel Art
+* Adjustable image **Width** and **Height** using sidebar sliders
+* **Magic Enhance** mode for automatically improving prompts with high-quality descriptive keywords
+* **Surprise Me!** button for generating images from random creative prompts
+* Image preview inside the application
+* Download generated images as **.png** files
+* Dynamic download filename based on the selected art style
+* Loading spinner while generating images
+* Responsive sidebar settings
+
+### 📚 Learning Outcomes
+
+* Building AI-powered image generation applications
+* Working with REST APIs using the `requests` library
+* Handling images using the **Pillow (PIL)** library
+* URL encoding using `urllib.parse`
+* Working with query parameters in HTTP requests
+* Using Streamlit sidebar components
+* Implementing sliders, checkboxes, and buttons
+* Creating reusable functions
+* Applying conditional logic
+* Downloading files using `st.download_button()`
+* Using Python's `random` module for dynamic content
+* Improving user experience with loading indicators and interactive controls
+
+---
+
 # 🛠️ Technologies Used
 
 * Python 3
@@ -146,6 +191,11 @@ Assignments/
 │   ├── requirements.txt
 │   ├── README.md
 │   ├── .env (not included)
+│   └── .gitignore
+|
+├── Assignment 4/
+│   ├── app.py
+│   ├── requirements.txt
 │   └── .gitignore
 │
 ├── screenshots/
@@ -210,6 +260,12 @@ streamlit run app.py
 
 ---
 
+### Assignment 4
+
+![alt text](screenshots/image-3.png)
+
+---
+
 # 🎯 Skills Demonstrated
 
 * Python Programming
@@ -226,6 +282,17 @@ streamlit run app.py
 * Stateful Chatbot Development
 * Conversation Memory Management
 * Interactive Chat Interfaces
+* AI Image Generation
+* REST API Integration
+* Pollinations AI API
+* Image Processing with Pillow
+* HTTP Query Parameters
+* URL Encoding
+* Streamlit Download Button
+* Dynamic File Downloads
+* Interactive Streamlit Sidebar
+* User Experience (UX) Enhancements
+* Randomized Content Generation
 
 ---
 

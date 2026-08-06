@@ -1,0 +1,17 @@
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.streamlit/
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
