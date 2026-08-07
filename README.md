@@ -192,6 +192,46 @@ Build an interactive AI-powered visual novel application featuring dynamic narra
 
 ---
 
+# Assignment 7 – Life-OS (Screen-Time Wellbeing Dashboard)
+
+### 📌 Objective
+
+Build "Life-OS", an interactive screen-time and digital wellbeing dashboard featuring dataset exploration, goal tracking, visual analytics, AI productivity coaching, and dynamic persona image generation using Pandas, Streamlit, Groq, and Pollinations AI.
+
+### ✨ Features
+
+* Dataset loading and validation for `screentime.csv` (14 days of screen usage)
+* Interactive sidebar controls for selecting specific days and adjusting **Daily Screen Time Goals (minutes)**
+* Real-time KPI Metric Cards using `st.columns()` and `st.metric()`:
+  * Total Screen Time Today
+  * Most Used Application
+  * Difference vs Daily Goal (with `delta_color="inverse"`)
+* Visual Analytics:
+  * **Line Chart**: 14-day aggregated screen-time trajectory
+  * **Bar Chart**: Category breakdown for selected day
+* **AI Productivity Coach** powered by **Groq API**:
+  * Brutally honest yet supportive habit evaluation
+  * Productive and unhealthy habit analysis
+  * Offline replacement suggestions
+  * Micro-challenges for tomorrow
+  * Conditional alert styling (`st.info()` vs `st.warning()` based on goal alignment)
+* **Innovation Feature — Digital Lifestyle Visualization**:
+  * Generates a dynamic visual persona prompt using Groq
+  * Renders concept artwork using **Pollinations AI** based on user screen-time habits
+* Robust CSV dataset loader with automated debugging (file path validation, shape inspection, 5-row preview, missing column checks, and `EmptyDataError` handling)
+
+### 📚 Learning Outcomes
+
+* Building multi-section SaaS dashboards using Streamlit (`st.container`, `st.columns`, `st.metric`, `st.divider`, `st.caption`)
+* Data manipulation and time-series aggregation using **Pandas**
+* Interactive charting using Streamlit native line and bar charts
+* Modular AI architecture separating UI (`app.py`) from AI logic (`ai.py`)
+* Prompt engineering for structured coaching and image generation
+* Dynamic HTTP API integration with **Pollinations AI** for image rendering
+* Comprehensive exception and data validation handling in Python
+
+---
+
 # 🛠️ Technologies Used
 
 * Python 3
@@ -239,6 +279,14 @@ Assignments/
 │   ├── assets/
 │   │   ├── images/
 │   │   └── audio/
+│   ├── .env (not included)
+│   └── .gitignore
+│
+├── Assignment 7/
+│   ├── app.py
+│   ├── ai.py
+│   ├── screentime.csv
+│   ├── requirements.txt
 │   ├── .env (not included)
 │   └── .gitignore
 │
@@ -313,6 +361,14 @@ streamlit run app.py
 ### Assignment 5
 
 ![alt text](screenshots/image-4.png)
+
+---
+
+### Assignment 7
+
+![alt text](screenshots/image-5.png)
+![alt text](screenshots/image-6.png)
+![alt text](screenshots/image-7.png)
 
 ---
 
