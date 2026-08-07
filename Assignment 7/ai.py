@@ -3,23 +3,17 @@ import requests
 import urllib.parse
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
 def get_pollinations_image_url(prompt: str) -> str:
-    """Encodes an image prompt and returns the Pollinations.ai image URL."""
     clean_prompt = prompt.strip().strip('"').strip("'")
     encoded_prompt = urllib.parse.quote(clean_prompt)
     return f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=800&height=450&nologo=true"
 
 def generate_digital_lifestyle_prompt(total_time: int, goal_minutes: int, usage_summary: str) -> str:
-    """
-    Generates a short image prompt describing the user's current digital lifestyle based on screen time.
-    """
     api_key = os.getenv("GROQ_API_KEY") or os.getenv("GEMINI_API_KEY")
     diff = total_time - goal_minutes
 
-    # Default fallback prompts if API call fails
     fallback_prompt = (
         "A tired zombie scrolling endlessly on a glowing smartphone in a dark room" 
         if diff > 0 else 
@@ -55,7 +49,6 @@ def generate_digital_lifestyle_prompt(total_time: int, goal_minutes: int, usage_
         res_prompt = completion.choices[0].message.content.strip()
         return res_prompt if res_prompt else fallback_prompt
     except Exception:
-        # HTTP fallback
         url = "https://api.groq.com/openai/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -81,10 +74,6 @@ def generate_digital_lifestyle_prompt(total_time: int, goal_minutes: int, usage_
             return fallback_prompt
 
 def generate_ai_coaching(usage_summary: str, total_time: int, goal_minutes: int) -> str:
-    """
-    Generates AI coaching insights using Groq based on today's category-wise screen usage.
-    Acts as a brutally honest but supportive productivity coach.
-    """
     api_key = os.getenv("GROQ_API_KEY") or os.getenv("GEMINI_API_KEY")
 
     if not api_key:
@@ -154,10 +143,6 @@ Please provide your AI coaching evaluation based on this data.
             return f"⚠️ **Connection Error**: Could not connect to Groq API ({req_err})."
 
 def generate_ai_coaching_and_image(usage_summary: str, total_time: int, goal_minutes: int):
-    """
-    Generates both AI coaching feedback and Pollinations image prompt + URL.
-    Returns: (coaching_text, image_prompt, image_url)
-    """
     coaching_text = generate_ai_coaching(usage_summary, total_time, goal_minutes)
     image_prompt = generate_digital_lifestyle_prompt(total_time, goal_minutes, usage_summary)
     image_url = get_pollinations_image_url(image_prompt)
