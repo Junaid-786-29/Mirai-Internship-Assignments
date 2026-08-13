@@ -409,3 +409,15 @@ streamlit run app.py
 # 📄 License
 
 This repository was created for educational purposes as part of the **MirAI School of Technology – Virtual Summer Internship 2026**.
+
+## Copyright
+
+© 2026 Junaid Khan. All Rights Reserved.
+
+This project is the original work of Junaid Khan.
+
+Unauthorized copying, modification, redistribution, publication,
+or presentation of this project as someone else's work is not permitted.
+
+If you reference this project, please provide proper attribution to
+Junaid Khan and the original repository.
